@@ -1,11 +1,7 @@
+<h1>Hello world</h1>
+
+<p>{{ message}}</p>
+
 <app-navbar></app-navbar>
-
-
-
-
-
-
-
-
-
-<!-- <router-outlet></router-outlet> -->
+<app-post [fromParent]='parentMessage' (messageEvent)='reciveMessage($event)'></app-post>
+<p>{{ fromChildOutput}}</p>

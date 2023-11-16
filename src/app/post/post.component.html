@@ -1,1 +1,8 @@
-<p>post works!</p>
+<h1>{{ title}}</h1>
+<p>{{ messagePost}}</p>
+
+<h3>{{ fromParent}}</h3>
+
+<app-post-list [fromPostParent]='postParentMessage'></app-post-list>
+
+<button (click)='sendMessage()'>Click</button>
