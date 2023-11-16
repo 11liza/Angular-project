@@ -5,3 +5,11 @@
 <app-navbar></app-navbar>
 <app-post [fromParent]='parentMessage' (messageEvent)='reciveMessage($event)'></app-post>
 <p>{{ fromChildOutput}}</p>
+
+<!--Property Binding-->
+<!-- <img src="{{ imgUrl}}" alt=""> -->
+
+<img [src]="imgUrl" alt=""> <!-- */cleaner/* -->
+'
+<!-- Class Binding -->
+<h1 class="text-red">This is class Binding</h1>

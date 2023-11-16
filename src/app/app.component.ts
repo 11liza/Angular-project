@@ -20,6 +20,7 @@ export class AppComponent implements AfterViewInit {
   parentMessage: string = 'Message coming from parent component';
   message!: string;
   fromChildOutput: string | undefined;
+  imgUrl: string = 'https://miro.medium.com/v2/resize:fit:783/1*Kj8Eq401fP2ecTY8r9B89Q.png';
 
 
   @ViewChild(PostComponent) childComp: any;
