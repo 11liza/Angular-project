@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PostComponent } from './post/post.component';
+import { FormsModule } from '@angular/forms';
 
 NgModule({
     declarations: [
@@ -13,6 +14,7 @@ NgModule({
     ],
     imports: [
         BrowserModule,
+        FormsModule
     ],
     /*    [
            providers: [],

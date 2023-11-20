@@ -1,15 +1,58 @@
 <h1>My Angular first project</h1>
 
-<p>{{ message}}</p>
+<div>
+    <h1>Post Form </h1>
+    <input type="text" placeholder="Post Title" [(ngModel)]="postTitle">
 
-<app-navbar></app-navbar>
+    <textarea cols="30" rows="10" placeholder="Post Details" [(ngModel)]="postDetails"></textarea>
+    <br>
+    <input type="text" placeholder="Post Image URL" [(ngModel)]="imageURL">
+    <br>
+    <input type="text" placeholder="Post URL" [(ngModel)]="postURL">
+    <br>
+    <input type="checkbox" [(ngModel)]="addBackground"> Add Background
+    <br>
+</div>
+
+<div class="preview-area">
+    <img [src]="imageURL" alt="">
+    <h1> <span [class.add-background]="addBackground">{{postTitle}} </span></h1>
+
+    <p>{{postDetails}}</p>
+    <a [href]="postURL" target="_blank" [style.display]="postURL ? 'block' : 'none' "> More Details> </a>
+</div>
+
+
+
+<!-- <p>{{ message}}</p> -->
+
+<!-- <app-navbar></app-navbar>
 <app-post [fromParent]='parentMessage' (messageEvent)='reciveMessage($event)'></app-post>
-<p>{{ fromChildOutput}}</p>
+<p>{{ fromChildOutput}}</p> -->
 
 <!--Property Binding-->
 <!-- <img src="{{ imgUrl}}" alt=""> -->
 
-<img [src]="imgUrl" alt=""> <!-- */cleaner/* -->
+<!-- <img [src]="imgUrl" alt="">  --><!-- */cleaner/* -->
 '
 <!-- Class Binding -->
-<h1 class="text-red">This is class Binding</h1>
+<!-- <h1 class="text-red">This is class Binding</h1> -->
+
+<!-- Event binding -->
+<!-- <button (click)='buttonClick()'>Click Me</button> -->
+
+<!-- Event Filtering -->
+
+<!-- <input type="text" (keyup.enter)="onKeyup()"> -->
+
+
+
+<!-- Template variable -->
+<!-- <input type="text" (keyup.enter)="onKeyup(username.value)" #username> -->
+
+<!-- Angular two way binding  -->
+
+<!-- <input type="text" [value]="textValue" (keyup.enter)="onKeyup()">
+
+<br> -->
+<!-- <input type="text" [(ngModel)]='textValue' (keyup.enter)="onKeyup()">  -->
